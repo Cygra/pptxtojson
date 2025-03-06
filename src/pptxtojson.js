@@ -307,7 +307,7 @@ function getNote(noteContent) {
     if (rNodes.constructor !== Array) rNodes = [rNodes]
     for (const rNode of rNodes) {
       const t = getTextByPathList(rNode, ['a:t'])
-      if (t) text += t
+      if (t && typeof t === "string") text += t
     }
   }
   return text
